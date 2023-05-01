@@ -55,7 +55,7 @@
             transition: .3s ease-in-out;
         }
 
-        .btn-container {
+        .btn-container-module-1 {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -68,7 +68,8 @@
     <div class="container">
         <h1>Bootcamp</h1>
         <p>April 15, 2023 - December 2, 2023</p>
-        <div class="btn-container">
+        <h2>Module 1</h2>
+        <div class="btn-container-module-1">
             <button onclick="window.location.href='https://sobreratas.github.io/prework/';">Prework (3/15/2023 -
                 4/9/2023)</button>
         </div>
@@ -78,11 +79,11 @@
     </div>
     <script>
 
-        const btnContainer = document.querySelector(".btn-container");
+        const btnContainerModule1 = document.querySelector(".btn-container-module-1");
         const btn = document.querySelector("button");
 
         window.addEventListener('DOMContentLoaded', function () {
-            displayBtns(btnLabels);
+            displayBtns(btnLabelsModule1);
         })
 
         function displayBtns(arr) {
@@ -90,10 +91,10 @@
                 return `<button onclick="window.location.href=${item.link};">${item.text}</button>`
             })
             btnMap = btnMap.join("");
-            btnContainer.innerHTML = btnMap;
+            btnContainerModule1.innerHTML = btnMap;
         }
 
-        const btnLabels = [
+        const btnLabelsModule1 = [
             {
                 week: 00,
                 text: "Prework (3/13/2023 - 4/9/2023)",
@@ -113,6 +114,11 @@
                 week: 2,
                 text: "Week 2 (4/23/2023 - 4/29/2023)",
                 link: "'https://sobreratas.github.io/week2/'"
+            },
+            {
+                week: 3,
+                text: "Week 3 (4/30/2023 - 5/6/2023)",
+                link: "'https://sobreratas.github.io/week3/'"
             },
         ]
     </script>
